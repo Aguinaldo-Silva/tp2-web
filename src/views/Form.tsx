@@ -1,4 +1,6 @@
+import { Button } from '@mui/material';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Form: React.FC = () => {
     const [nome, setNome] = useState<string>('');
@@ -30,6 +32,9 @@ const Form: React.FC = () => {
 
     return (
         <div>
+            <nav>
+                <Link to="/"><Button>Home</Button></Link>
+            </nav>
             <h1>{isEditing ? 'Editar Dados' : 'Cadastrar Dados'}</h1>
             <form onSubmit={handleSubmit}>
                 <label>
